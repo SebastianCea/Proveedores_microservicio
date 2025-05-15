@@ -1,7 +1,5 @@
 package com.example.Proveedores.Model;
 
-import java.time.LocalDate;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -22,24 +20,24 @@ public class proveedor {
     private String id_proveedor;
 
     @Column
-    private String destino;
+    private String id_receptor;
 
     @Column
-    private String estado;
+    private String nombre;
 
     @Column
-    private String origen;
+    private String apellido;
 
     @Column
-    private String id_cliente;
+    private String direccion;
 
     @Column
-    private String id_venta;
+    private int telefono;
 
     @Column
-    private LocalDate fecha_salida;
+    private String email;
 
-    @Column 
-    private LocalDate fecha_entrega;
+    @Column
+    private String nacionalidad;
     }
 }
