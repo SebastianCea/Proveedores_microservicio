@@ -28,10 +28,10 @@ public class Orden {
     @Id
     private String id_orden;
 
-    @Column
+    @Column (nullable = false)
     private int cantidad;
 
-    @Column
+    @Column(nullable = false)
     private LocalDate fecha_estimada;
 
     @ManyToOne()

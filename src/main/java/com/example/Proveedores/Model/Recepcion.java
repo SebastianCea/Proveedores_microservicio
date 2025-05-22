@@ -24,10 +24,10 @@ public class Recepcion {
     @Id
     private String id_recepcion;
 
-    @Column
+    @Column(nullable = false)
     private LocalDate fecha_recepcion;
 
-    @Column
+    @Column(nullable = false)
     private int cantidad_recibida;
 
     @ManyToOne()
