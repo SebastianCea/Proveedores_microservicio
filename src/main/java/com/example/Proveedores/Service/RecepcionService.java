@@ -24,4 +24,12 @@ public class RecepcionService {
     public Recepcion recepcionxId(String id){
         return recepcionRepository.getReferenceById(id);
     }
+
+    public String eliminarRecepcion(String id){
+        if(recepcionRepository.existsById(id)){
+            recepcionRepository.deleteById(id);
+            return "Recepcion de productos eliminada";
+        }
+        return "No se encontró la recepcion de productos";
+    }
 }

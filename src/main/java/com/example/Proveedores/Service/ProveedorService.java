@@ -24,4 +24,12 @@ public class ProveedorService {
     public Proveedor proveedorxId(String id){
         return proveedorRepository.getReferenceById(id);
     }
+
+    public String eliminarProveedor(String id){
+        if(proveedorRepository.existsById(id)){
+            proveedorRepository.deleteById(id);
+            return "Proveedor eliminado";
+        }
+        return "No se encontró al proveedor";
+    }
 }

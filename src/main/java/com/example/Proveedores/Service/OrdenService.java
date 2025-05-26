@@ -24,4 +24,12 @@ public class OrdenService {
     public Orden ordenxId(String id){
         return ordenRepository.getReferenceById(id);
     }
+
+    public String eliminarOrden(String id){
+        if(ordenRepository.existsById(id)){
+            ordenRepository.deleteById(id);
+            return "Orden de abastecimiento eliminada";
+        }
+        return "No se encontró la orden de abastecimiento";
+    }
 }
